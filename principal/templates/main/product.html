@@ -1,0 +1,20 @@
+{% extends "main/layout.html" %}
+{% block body %}
+
+<h2>Productos</h2>
+<br>
+
+<ul class="card bg-primary">
+    {% for i in products %}
+    <div class="card m-1">
+    <li>Nombre: {{i.titulo}}</li>
+    <li>Descripcion: {{i.descripcion}}</li>
+    <li>Precio: {{i.precio}}</li>
+    <li>Categoria: {{i.categoria}}</li>
+    
+    </div>
+    {% endfor %}
+</ul>
+
+
+{% endblock %}

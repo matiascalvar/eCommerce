@@ -1,0 +1,51 @@
+{% extends "main/layout.html" %}
+
+{% block body %}
+
+<h3>Alta de Producto</h3>
+
+<form class="bg-primary" action="{% url 'producto_alta' %}" method="POST">
+    {% csrf_token %}
+        
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="form-group">
+                <label>Titulo</label>
+                {{form.titulo}}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="form-group">
+                <label>Descripción</label>
+                {{form.descripcion}}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="form-group">
+                <label>Precio</label>
+                {{form.precio}}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="form-group">
+                <label for="categorias">Categoría</label>
+                {{form.categoria}}
+            </div>
+        </div>
+    </div>
+
+    
+    <input class="" type="submit" value="Submit">
+
+</form>
+
+
+
+
+{% endblock %}

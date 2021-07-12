@@ -1,0 +1,33 @@
+{% extends "main/layout.html" %}
+
+{% block body %}
+    <div class="bg-primary p-2 m-5 rounded">
+      <div class="row justify-content-around mt-3"> <!--cards container-->
+        {% for i in lista_productos %}
+        <div class="card mb-4" style="width: 18rem;">
+          <img style="width : 200px;" src="{{i.imagen.url}}" alt="" class="img-fluid" >
+          <div class="card-body text-center">
+            <div class="display-6">{{i.titulo}}</div>
+            <hr>
+            <div>{{i.descripcion}}</div>
+            <hr>
+            <div>{{i.categoria}}</div>
+            <hr>
+            <div>${{i.precio}}</div>
+          </div>
+        </div>
+        {% endfor %}
+       
+      </div>
+      <div class="row justify-content-center mt-5 mb-3">
+        <div class=" btn btn-secondary" style="width: 78.5rem;">
+          <div class="card-body">
+            <p class="card-text text-center">MAS PRODUCTOS</p>
+
+          </div>
+        </div>   
+        </div>
+
+      </div>
+
+{% endblock %}
