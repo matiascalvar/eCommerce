@@ -1,4 +1,4 @@
 # eCommerce project
 
-Made on Django
+Made on Django.
 Not finished yet!
